@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+int main()
+{
+   char str[100];
+   int i,mid,j,len;
+   char mid_lett;
+   printf("\n enter an odd number as length of your string");
+   scanf("%d",&len);
+   printf("\n Enter your string of length %d",len);
+   for(i=0;i<len;i++)
+   {
+       scanf("%c",&str[i]);
+   }
+   mid=(len/2)+1;
+   mid_lett=str[mid];
+   for(i=mid;i<len;i++)
+   {
+       for(j=i+1;j<i;)
+       {
+          printf("%c ",str[j]); 
+          ++j;
+        
+       }
+       printf("\n");
+   }
+    if(j=='\0')
+    {
+      for(i=0;i<mid;i++)
+   {
+       for(j=i+1;j<i;j++)
+       {
+          printf("%c ",str[j]);
+          ++j;
+   }
+   printf("\n");
+   }
+    }
+    return 0;
+}
